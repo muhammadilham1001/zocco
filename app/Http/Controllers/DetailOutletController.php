@@ -22,7 +22,7 @@ public function detailoulet($id)
     $menus = \App\Models\Menu::where('outlet_id', $id)->with('category')->get();
     
     // Kirimkan $outlets juga ke view
-    return view('DetailOuletZocco', compact('outlet', 'outlets', 'categories', 'menus'));
+    return view('detail-oulet-zocco', compact('outlet', 'outlets', 'categories', 'menus'));
 }
 public function DetailMenu($id) {
     $outlet = \App\Models\Outlet::findOrFail($id);
@@ -31,6 +31,6 @@ public function DetailMenu($id) {
     // Ambil SEMUA menu tanpa batas untuk halaman detail
     $menus = \App\Models\Menu::where('outlet_id', $id)->with('category')->get();
 
-    return view('DetailMenu', compact('outlet', 'categories', 'menus'));
+    return view('detail-menu', compact('outlet', 'categories', 'menus'));
 }
 }

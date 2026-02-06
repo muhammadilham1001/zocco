@@ -31,7 +31,7 @@ public function reservation()
     $confirmedCount = Reservation::where('status', 'confirmed')->count();
     $cancelledCount = Reservation::where('status', 'cancelled')->count();
 
-    return view('Reservation', compact(
+    return view('reservation', compact(
         'reservations', 
         'outlets', 
         'totalCount', 

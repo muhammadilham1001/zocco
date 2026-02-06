@@ -93,7 +93,7 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('admin')->group(function () {
             Route::get('/dashboard-management', [AdminManajemenDashboardController::class, 'managedashboard'])->name('ManajemenDashboard'); 
-            Route::post('/hero/update', [AdminManajemenDashboardController::class, 'updateHero'])->name('hero.update');
+        Route::post('/hero/update', [AdminManajemenDashboardController::class, 'updateHero'])->name('hero.update');
             Route::post('/foto-store', [AdminManajemenDashboardController::class, 'storeFoto'])->name('admin.foto.store');
             Route::delete('/foto-delete/{id}', [AdminManajemenDashboardController::class, 'destroyFoto'])->name('admin.foto.delete');
             Route::post('/text-update', [AdminManajemenDashboardController::class, 'updateText'])->name('admin.text.update');

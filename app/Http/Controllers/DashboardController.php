@@ -34,7 +34,7 @@ class DashboardController extends Controller
         $slogan = Setting::where('key', 'slogan_utama')->first();
         $deskripsi = Setting::where('key', 'deskripsi_singkat')->first();
 
-        return view('Dashboard', compact('galleries', 'slogan', 'deskripsi', 'outlets', 'beans', 'merchandises', 'heroTitle', 'heroSubtitle', 'heroBg'));
+        return view('dashboard', compact('galleries', 'slogan', 'deskripsi', 'outlets', 'beans', 'merchandises', 'heroTitle', 'heroSubtitle', 'heroBg'));
     }
 
     /**
@@ -65,7 +65,7 @@ class DashboardController extends Controller
     // 4. Pertahankan parameter status di link pagination
     $reservations->appends($request->all());
 
-    return view('UserReservation', compact('outlets', 'reservations', 'menus'));
+    return view('user-reservation', compact('outlets', 'reservations', 'menus'));
 }
 
     /**
@@ -239,6 +239,6 @@ class DashboardController extends Controller
     {
         $beans = CoffeeBean::all();
         $merchandises = Merchandise::all()->unique('name');
-        return view('DetailBeansmer', compact('beans', 'merchandises'));
+        return view('detail-beansmer', compact('beans', 'merchandises'));
     }
 }

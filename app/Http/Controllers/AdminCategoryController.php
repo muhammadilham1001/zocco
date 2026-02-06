@@ -12,7 +12,7 @@ class AdminCategoryController extends Controller
     {
         $categories = Category::with('outlet')->paginate(10);
         $outlets = Outlet::all(); 
-        return view('ManajemenKategori', compact('categories', 'outlets'));
+        return view('manajemen-kategori', compact('categories', 'outlets'));
     }
 
     /**

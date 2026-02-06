@@ -16,7 +16,7 @@ class HeroController extends Controller
         $heroSubtitle = HeroSetting::where('key', 'hero_subtitle')->first();
         $heroBg = HeroSetting::where('key', 'hero_bg')->first();
 
-        return view('ManageDashboardUser', compact('heroTitle', 'heroSubtitle', 'heroBg'));
+        return view('manage-dashboard-user', compact('heroTitle', 'heroSubtitle', 'heroBg'));
     }
 
     public function update(Request $request)

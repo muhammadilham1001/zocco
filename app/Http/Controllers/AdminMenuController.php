@@ -34,7 +34,7 @@ class AdminMenuController extends Controller
         $menus = $query->latest()->paginate(10);
         $outlets = Outlet::all();
 
-        return view('ManajemenMenu', compact('menus', 'outlets'));
+        return view('manajemen-menu', compact('menus', 'outlets'));
     }
 
     protected function customMessages()

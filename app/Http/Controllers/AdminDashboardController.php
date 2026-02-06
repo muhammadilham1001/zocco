@@ -55,7 +55,7 @@ class AdminDashboardController extends Controller
         }
 
         // 4. Return ke View
-        return view('DashboardAdmin', compact(
+        return view('dashboard-admin', compact(
             'totalReservasi', 
             'totalOutlet', 
             'totalProduk', 

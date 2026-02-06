@@ -12,7 +12,7 @@ class AdminOutletController extends Controller
     public function manageoutlet()
     {
         $outlets = Outlet::latest()->paginate(5);
-        return view('ManajemenOutlet', compact('outlets'));
+        return view('manajemen-outlet', compact('outlets'));
     }
 
     protected function customMessages()

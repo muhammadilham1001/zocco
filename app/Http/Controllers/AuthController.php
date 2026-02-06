@@ -14,7 +14,7 @@ use Illuminate\Validation\Rule;
 class AuthController extends Controller {
     
     public function showLogin() { 
-        return view('Login'); 
+        return view('login'); 
     }
 
     public function login(Request $request) {
@@ -36,7 +36,7 @@ class AuthController extends Controller {
     }
 
     public function showRegister() { 
-        return view('Register'); 
+        return view('register'); 
     }
 
     /**
@@ -80,7 +80,7 @@ class AuthController extends Controller {
         if (!Session::has('register_data')) {
             return redirect()->route('register');
         }
-        return view('Verify'); // Pastikan Anda membuat view ini
+        return view('verify'); // Pastikan Anda membuat view ini
     }
 
     /**
@@ -117,7 +117,7 @@ class AuthController extends Controller {
     }
 
     public function showForgotPassword() {
-    return view('Forgot-Password');
+    return view('forgot-password');
 }
 
 public function sendResetOtp(Request $request) {
@@ -144,7 +144,7 @@ public function sendResetOtp(Request $request) {
 
 public function showVerifyResetOtp() {
     if (!Session::has('reset_password_data')) return redirect()->route('password.request');
-    return view('Verify-Reset');
+    return view('verify-reset');
 }
 
 public function verifyResetOtp(Request $request) {
@@ -161,7 +161,7 @@ public function verifyResetOtp(Request $request) {
 
 public function showResetPassword() {
     if (!Session::get('otp_verified')) return redirect()->route('password.request');
-    return view('Reset-Password');
+    return view('reset-password');
 }
 
 public function resetPassword(Request $request) {

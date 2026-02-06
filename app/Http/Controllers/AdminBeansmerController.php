@@ -17,7 +17,7 @@ class AdminBeansmerController extends Controller
         $beans = CoffeeBean::with('outlets')->paginate(6, ['*'], 'beans_page'); 
         $merchandises = Merchandise::with('outlets')->paginate(6, ['*'], 'merch_page');
 
-        return view('BeansMerchan', compact('beans', 'merchandises', 'outlets'));
+        return view('beans-merchan', compact('beans', 'merchandises', 'outlets'));
     }
 
     /**

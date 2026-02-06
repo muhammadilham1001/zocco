@@ -17,7 +17,7 @@ class AdminManajemenDashboardController extends Controller {
         $deskripsi = Setting::where('key', 'deskripsi_singkat')->first();
 
         // Pastikan nama view sesuai dengan file blade Anda
-        return view('ManageDashboardUser', compact('galleries', 'slogan', 'deskripsi'));
+        return view('manage-dashboard-user', compact('galleries', 'slogan', 'deskripsi'));
     }
 
     /**
